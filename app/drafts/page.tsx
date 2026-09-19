@@ -126,7 +126,7 @@ export default function DraftsPage() {
         </div>
       )}
       <p className="drafts-footnote">
-        共 {rows.length} 条记录 · 本地保存 · 本阶段不接 AI
+        共 {rows.length} 条记录 · 本地保存 · 生成结果与反馈可恢复
       </p>
     </main>
   );

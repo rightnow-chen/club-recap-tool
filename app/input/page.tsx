@@ -92,7 +92,7 @@ export default function InputPage() {
           }}
         >
           <MockNotice>
-            第 2 阶段：输入与照片预览自动保存到本地。带 *
+            输入与照片预览会自动保存到本地。带 *
             为必填，选填项留空不影响继续；不调用 AI。
           </MockNotice>
           <SaveStatus />

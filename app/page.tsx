@@ -45,7 +45,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="hero-note">
-            <span className="small-dot" />第 2 阶段 · 本地草稿
+            <span className="small-dot" />第 6 阶段 · AI 生成与本地历史
             <span>无需登录 · 刷新可恢复</span>
           </div>
         </div>
