@@ -1,0 +1,135 @@
+import type { FormData, ImageAsset, PendingItem } from "./types";
+import { eventTypes } from "./event-types";
+export const emptyForm: FormData = {
+  type: eventTypes[0],
+  name: "",
+  date: "",
+  time: "",
+  place: "",
+  organizer: "",
+  brief: "",
+  flow: "",
+  highlights: "",
+  guest: "",
+  count: "",
+  awards: "",
+  thanks: "",
+  next: "",
+  tone: "正式纪实",
+  length: "默认 600–900 字",
+};
+export const sampleForm: FormData = {
+  ...emptyForm,
+  name: "秋季求职经验分享会",
+  date: "2026-09-16",
+  time: "19:00–21:00",
+  place: "教学楼 302",
+  organizer: "职业发展协会",
+  brief:
+    "邀请毕业生李同学，围绕秋招准备、简历优化和面试经验开展分享，帮助同学们梳理求职准备思路。",
+  flow: "签到入场 → 嘉宾经验分享 → 简历修改交流 → 互动问答 → 合影留念",
+  highlights: "李同学结合现场提供的简历，演示如何把项目经历写得清楚、具体。",
+  guest: "李同学，2024 届毕业生",
+  awards: "整理了一份现场问答记录，供社团成员后续参考。",
+  thanks: "分享经验的李同学，以及参与筹备和现场服务的工作人员。",
+  next: "",
+  tone: "青春温暖",
+};
+export const mockImages: ImageAsset[] = [
+  {
+    image_id: "mock-1",
+    image_order: 1,
+    src: "/images/check-in.svg",
+    original_key: "",
+    filename: "01-签到现场.svg",
+    tag: "签到",
+    description: "同学们在教室入口签到，领取活动资料。",
+    is_used: true,
+    is_key: false,
+    mock: true,
+  },
+  {
+    image_id: "mock-2",
+    image_order: 2,
+    src: "/images/sharing.svg",
+    original_key: "",
+    filename: "02-嘉宾分享.svg",
+    tag: "分享",
+    description: "李同学讲解简历中的项目经历表达方法。",
+    is_used: true,
+    is_key: true,
+    mock: true,
+  },
+  {
+    image_id: "mock-3",
+    image_order: 3,
+    src: "/images/group.svg",
+    original_key: "",
+    filename: "03-活动合影.svg",
+    tag: "合影",
+    description: "嘉宾与参与同学在活动结束后合影留念。",
+    is_used: true,
+    is_key: false,
+    mock: true,
+  },
+];
+export const mockPending: PendingItem[] = [
+  {
+    id: "count",
+    field: "count",
+    title: "参与人数尚未填写",
+    message: "示例正文不包含具体人数，也不使用“百余人”等规模描述。",
+  },
+  {
+    id: "next",
+    field: "next",
+    title: "后续活动安排待确认",
+    message: "示例稿保留致谢，不写入未经确认的活动日期或报名信息。",
+  },
+];
+export const mockResult = {
+  titles: [
+    "秋季求职经验分享会活动回顾",
+    "把求职路上的经验，分享给正在出发的你",
+    "从简历到面试：一起梳理秋招准备思路",
+  ],
+  summary:
+    "从简历中的一段项目经历，到面试前的一次认真准备，职业发展协会邀请毕业生李同学分享秋招经验。让我们沿着现场分享与交流，回顾这场关于求职准备的相聚。",
+  sections: [
+    {
+      id: "intro",
+      label: "导语",
+      heading: "在秋天，为下一程做准备",
+      text: "9 月 16 日 19:00–21:00，由职业发展协会主办的秋季求职经验分享会在教学楼 302 举行。2024 届毕业生李同学围绕秋招准备、简历优化与面试经验展开分享，与同学们一起梳理求职准备的思路。",
+      image: 0,
+    },
+    {
+      id: "recap",
+      label: "活动回顾",
+      heading: "从经验分享，到面对面的交流",
+      text: "签到入场后，活动进入嘉宾经验分享环节。李同学围绕秋招准备展开讲解，并结合简历优化和面试中的实际问题分享经验。随后，同学们参与简历修改交流，在互动问答环节提出自己的疑问，让现场讨论回到具体的求职准备中。",
+      image: 1,
+    },
+    {
+      id: "highlights",
+      label: "高光时刻",
+      heading: "把一段经历，表达得更清楚",
+      text: "简历修改交流环节中，李同学结合现场提供的简历，演示如何把项目经历写得清楚、具体。同学们可以将讲解与自己的经历对照，思考哪些内容需要补充、哪些表述还可以更加明确。",
+      image: null,
+    },
+    {
+      id: "outcomes",
+      label: "成果/收获",
+      heading: "让现场的交流，有迹可循",
+      text: "本次活动整理了一份现场问答记录，供社团成员后续参考。分享中的问题与回应被记录下来，也为同学们继续梳理求职准备提供了素材。",
+      image: null,
+    },
+    {
+      id: "closing",
+      label: "致谢与预告",
+      heading: "感谢每一份认真准备",
+      text: "感谢李同学带来求职经验分享，感谢工作人员在活动筹备与现场服务中的付出。活动最后，嘉宾与参与同学合影留念，为这次交流留下记录。",
+      image: 2,
+    },
+  ],
+};
